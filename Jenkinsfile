@@ -25,9 +25,11 @@ pipeline {
         string(name: 'STAGE_INCLUDE', defaultValue: '', description: 'Regular expression for stages to run. Leave empty to run all stages.')
     }
 
-    stage('Test') {
-        steps {
-            println "Hello, this is a test!!"
+    stages {
+        stage('Test') {
+            steps {
+                println "Hello, this is a test!!"
+            }
         }
     }
 }
